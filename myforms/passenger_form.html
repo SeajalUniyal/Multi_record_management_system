@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Passenger Reservation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background: #00796b;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      font-size: 16px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form action="passenger_submit.php" method="POST">
+      <h2>Passenger Reservation</h2>
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Ticket Number:</label>
+      <input type="text" name="ticket_number" required>
+
+      <label>Departure:</label>
+      <input type="text" name="departure" required>
+
+      <label>Destination:</label>
+      <input type="text" name="destination" required>
+
+      <label>Travel Date:</label>
+      <input type="date" name="travel_date" required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
